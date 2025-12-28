@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Star, Users, Briefcase, Globe2, ShieldCheck, GraduationCap, Rocket, Code, TrendingUp, Mail, Phone } from 'lucide-react';
@@ -61,20 +60,47 @@ const Home: React.FC = () => {
 
             <div className="lg:w-1/2 relative">
               <div className="relative w-full aspect-square flex items-center justify-center">
-                 <div className="absolute inset-0 bg-blue-600 rounded-full opacity-10 animate-pulse scale-110"></div>
-                 <div className="absolute inset-0 bg-blue-600 rounded-full opacity-80 shadow-2xl shadow-blue-400/50 flex flex-col items-center justify-center text-center p-12">
-                   <h2 className="text-7xl font-black text-white mb-2">ND</h2>
-                   <p className="text-white/80 font-medium tracking-widest uppercase">Innovation Hub</p>
-                 </div>
-                 <div className="absolute -top-10 -right-10 md:right-0 bg-white p-6 rounded-2xl shadow-2xl flex items-center space-x-4 animate-bounce hover:animate-none">
-                    <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                      <Users size={24} />
-                    </div>
-                    <div>
-                      <div className="font-bold text-slate-800">Talent Pipeline</div>
-                      <div className="text-slate-400 text-xs uppercase tracking-wide">Global Network</div>
-                    </div>
-                 </div>
+                {/* Blue circle background */}
+                <div className="absolute inset-0 bg-blue-600 rounded-full opacity-10 animate-pulse scale-110"></div>
+                
+                {/* Main ND circle */}
+                <div className="absolute inset-0 bg-blue-600 rounded-full opacity-80 shadow-2xl shadow-blue-400/50 flex flex-col items-center justify-center text-center p-12">
+                  <h2 className="text-7xl font-black text-white mb-2">ND</h2>
+                  <p className="text-white/80 font-medium tracking-widest uppercase">Innovation Hub</p>
+                </div>
+                
+                {/* Top Right Box - Talent Pipeline */}
+                <div className="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-xl flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                    <Users size={20} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-800 text-sm">Talent Pipeline</div>
+                    <div className="text-slate-500 text-xs">Global Network</div>
+                  </div>
+                </div>
+                
+                {/* Bottom Left Box - Startup Funding */}
+                <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-xl flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">
+                    <TrendingUp size={20} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-800 text-sm">Startup Funding</div>
+                    <div className="text-blue-600 font-semibold text-xs">Investor Ready</div>
+                  </div>
+                </div>
+                
+                {/* Bottom Right Box - Digital Safety */}
+                <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-xl flex items-center space-x-3">
+                  <div className="w-10 h-10 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-800 text-sm">Digital Safety</div>
+                    <div className="text-blue-600 font-semibold text-xs">Certified Programs</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               {['About Us', 'Our Team', 'Partners', 'Careers'].map(link => (
                 <li key={link}><Link to="#" className="hover:text-blue-500 transition-colors">{link}</Link></li>
               ))}
-              <li><Link to="/admin/login" className="flex items-center space-x-2 text-slate-500 hover:text-blue-500 transition-colors mt-4 text-xs font-semibold uppercase tracking-widest"><Lock size={12}/> <span>Admin Login</span></Link></li>
+              {/*<li><Link to="/admin/login" className="flex items-center space-x-2 text-slate-500 hover:text-blue-500 transition-colors mt-4 text-xs font-semibold uppercase tracking-widest"><Lock size={12}/> <span>Admin Login</span></Link></li>*/}
             </ul>
           </div>
 

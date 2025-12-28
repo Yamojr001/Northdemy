@@ -141,6 +141,13 @@ export const TEAM: TeamMember[] = [
     // bio: "Venture capitalist and serial entrepreneur specializing in early-stage growth."
   },
   {
+    id: "7",
+    name: "Anam Sharma",
+    role: "Network / Infrastructure Engineer",
+    image: "https://prep-ai.xyz/ogasaid/yazeed.png",
+    // bio: "Venture capitalist and serial entrepreneur specializing in early-stage growth."
+  },
+  {
     id: "5",
     name: "Muhammad Musa Audii",
     role: "Operations & Support Lead",
@@ -149,7 +156,7 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: "6",
-    name: "Aliyu ",
+    name: "Aliyu Auwal",
     role: "Training & Capacity Building Lead",
     image: "https://prep-ai.xyz/ogasaid/aliyu.jpeg",
     // bio: "Venture capitalist and serial entrepreneur specializing in early-stage growth."
