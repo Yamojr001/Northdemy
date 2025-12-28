@@ -16,7 +16,7 @@ import { Service, TeamMember, BlogPost, Testimonial } from './types';
 
 export const COMPANY_DETAILS = {
   name: "NorthDemy Limited",
-  address: "No 14 Nana Plaza Opposite Sabon Gidan Galadiman Dutse, Abuja, Nigeria",
+  address: "No 14 Nana Plaza Opposite Sabon Gidan Galadiman Dutse, Jigawa, Nigeria",
   phone: "08099072748",
   email: "info@northdemy.com",
   socials: {
