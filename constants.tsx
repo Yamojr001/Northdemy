@@ -137,7 +137,7 @@ export const TEAM: TeamMember[] = [
     id: "4",
     name: "Yazeed Ahmed",
     role: "Cybersecurity & Data Specialist",
-    image: "https://prep-ai.xyz/ogasaid/yazeed.jpeg",
+    image: "https://prep-ai.xyz/ogasaid/yaz.jpeg",
     // bio: "Venture capitalist and serial entrepreneur specializing in early-stage growth."
   },
   {

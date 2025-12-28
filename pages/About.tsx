@@ -76,7 +76,7 @@ const About: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/2">
-              <img src="https://picsum.photos/seed/history/1000/800" alt="NorthDemy History" className="rounded-[40px] shadow-2xl" />
+              <img src="https://prep-ai.xyz/ogasaid/download.jpeg" alt="NorthDemy History" className="rounded-[40px] shadow-2xl" />
             </div>
             <div className="lg:w-1/2 space-y-8">
               <h2 className="text-4xl font-extrabold text-slate-900 leading-tight">A Legacy of <span className="text-blue-600">Digital Transformation</span></h2>
