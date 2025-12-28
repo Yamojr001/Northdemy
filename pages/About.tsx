@@ -91,9 +91,8 @@ const About: React.FC = () => {
               <div className="pt-6 space-y-4">
                  {[
                    'Over 500+ professionals trained and certified',
-                   'Trusted partner for 25+ global organizations',
-                   'Successfully launched 50+ tech startups',
-                   'Winner of Africa Tech Innovation Award 2023'
+                   'Trusted partner for 10+ global organizations',
+                   'Successfully launched 20+ tech startups',
                  ].map((item, i) => (
                    <div key={i} className="flex items-center space-x-3 text-slate-900 font-bold">
                      <CheckCircle2 size={24} className="text-emerald-500 shrink-0" />
