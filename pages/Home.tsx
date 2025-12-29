@@ -26,12 +26,12 @@ const Home: React.FC = () => {
                 <span>Your Partner in Digital Safety and Growth</span>
               </div>
               <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1]">
-                Empowering <br />
-                <span className="text-blue-600">Tech Talent</span> <br />
-                For Tomorrow
+                Building Africa’s <br />
+                <span className="text-blue-600">Secure </span> <br />
+                Digital Future
               </h1>
               <p className="text-xl text-slate-600 max-w-xl leading-relaxed">
-                NorthDemy is Africa's leading tech talent incubation and digital safety center, transforming potential into world-class expertise through innovative training, mentorship, and funding opportunities.
+                NorthDemy is a leading technology innovation, talent incubation, and digital security organization delivering world class training, enterprise systems, and mission critical solutions. We partner with governments, security agencies, and private enterprises to build skilled talent, deploy secure digital infrastructure, and address complex national and global challenges through advanced technology.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
                 <button className="px-8 py-4 rounded-xl bg-blue-600 text-white font-bold flex items-center space-x-2 hover:bg-blue-700 transition-all shadow-xl shadow-blue-200">

@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
               <span className="text-2xl font-extrabold text-white tracking-tight">NorthDemy</span>
             </div>
             <p className="text-slate-400 leading-relaxed">
-              Empowering the next generation of tech leaders through world-class training, incubation, and digital safety solutions.
+              NorthDemy Limited is a technology and security solutions company delivering enterprise software, cybersecurity, network infrastructure, and innovation programs for governments, security agencies, and private sector organizations while building Africa’s next generation of world class tech talent.
             </p>
             <div className="flex space-x-4">
               {[Linkedin, Twitter, Facebook, Instagram].map((Icon, idx) => (

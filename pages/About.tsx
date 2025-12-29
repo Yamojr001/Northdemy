@@ -27,7 +27,7 @@ const About: React.FC = () => {
               </div>
               <h2 className="text-3xl font-bold">Our Mission</h2>
               <p className="text-blue-50 text-lg leading-relaxed opacity-90">
-                To bridge the digital divide by providing accessible, high-quality training and resources that empower individuals and organizations to thrive in the digital economy. We are dedicated to nurturing talent and providing the infrastructure needed for sustainable tech growth.
+                To bridge the digital divide by designing, implementing, and securing high impact digital solutions for individuals, enterprises, and governments.We deliver world class technology training, enterprise systems, cybersecurity services, and mission critical infrastructure, while nurturing talent and building resilient digital ecosystems that support sustainable national and global development.
               </p>
             </div>
             
@@ -37,7 +37,7 @@ const About: React.FC = () => {
               </div>
               <h2 className="text-3xl font-bold">Our Vision</h2>
               <p className="text-slate-300 text-lg leading-relaxed opacity-90">
-                To be Africa's foremost ecosystem for tech innovation, recognized globally for producing world-class talent and secure digital solutions. We envision a future where every African has the skills to innovate and the security to prosper in a digital-first world.
+                To become Africa’s leading technology, security, and innovation ecosystem, globally recognized for delivering military grade digital solutions, producing elite tech talent, and partnering with governments, security agencies, and enterprises to solve complex national and international challenges.<br /> We envision a future where Africa not only innovates, but secures, governs, and leads confidently in a digital first world.
               </p>
             </div>
           </div>
