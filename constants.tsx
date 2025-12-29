@@ -20,10 +20,10 @@ export const COMPANY_DETAILS = {
   phone: "08099072748",
   email: "info@northdemy.com",
   socials: {
-    linkedin: "#",
-    twitter: "#",
-    facebook: "#",
-    instagram: "#"
+    linkedin: "https://www.linkedin.com/groups/15073006",
+    twitter: "https://x.com/NorthDemy",
+    facebook: "https://www.facebook.com/share/17Uz9YbQAZ/",
+    instagram: "https://www.instagram.com/north_demy?igsh=cDMyZG9yc2wzNmJo"
   }
 };
 
