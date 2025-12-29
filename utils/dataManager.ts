@@ -1,12 +1,12 @@
 
-import { SERVICES, PROGRAMS, TEAM, BOARD, BLOG_POSTS } from '../constants';
+import { SERVICES, PROGRAMS, ALL_TEAM, BLOG_POSTS, BOARD } from '../constants';
 
 const KEYS = {
   SERVICES: 'nd_services',
   PROGRAMS: 'nd_programs',
   TEAM: 'nd_team',
-  BOARD: 'nd_board',
-  BLOG: 'nd_blog'
+  BLOG: 'nd_blog',
+  BOARD: 'nd_board'
 };
 
 export const getManagedData = (key: string, fallback: any[]) => {
@@ -23,9 +23,9 @@ export const saveManagedData = (key: string, data: any[]) => {
 export const DataManager = {
   getServices: () => getManagedData(KEYS.SERVICES, SERVICES),
   getPrograms: () => getManagedData(KEYS.PROGRAMS, PROGRAMS),
-  getTeam: () => getManagedData(KEYS.TEAM, TEAM),
-  getBoard: () => getManagedData(KEYS.BOARD, BOARD),
+  getTeam: () => getManagedData(KEYS.TEAM, ALL_TEAM),
   getBlog: () => getManagedData(KEYS.BLOG, BLOG_POSTS),
+  getBoard: () => getManagedData(KEYS.BOARD, BOARD),
 
   addService: (item: any) => {
     const data = DataManager.getServices();
@@ -39,13 +39,13 @@ export const DataManager = {
     const data = DataManager.getTeam();
     saveManagedData(KEYS.TEAM, [{ ...item, id: Date.now().toString() }, ...data]);
   },
-  addBoardMember: (item: any) => {
-    const data = DataManager.getBoard();
-    saveManagedData(KEYS.BOARD, [{ ...item, id: Date.now().toString() }, ...data]);
-  },
   addBlogPost: (item: any) => {
     const data = DataManager.getBlog();
     saveManagedData(KEYS.BLOG, [{ ...item, id: Date.now().toString(), date: new Date().toLocaleDateString() }, ...data]);
+  },
+  addBoardMember: (item: any) => {
+    const data = DataManager.getBoard();
+    saveManagedData(KEYS.BOARD, [{ ...item, id: Date.now().toString() }, ...data]);
   },
   
   deleteItem: (keyType: keyof typeof KEYS, id: string) => {

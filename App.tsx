@@ -5,7 +5,6 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
-import Board from './pages/Board';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Programs from './pages/Programs';
@@ -18,7 +17,6 @@ import ServicesAdmin from './admin/ServicesAdmin';
 import ProgramsAdmin from './admin/ProgramsAdmin';
 import BlogAdmin from './admin/BlogAdmin';
 import TeamAdmin from './admin/TeamAdmin';
-import BoardAdmin from './admin/BoardAdmin';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const App: React.FC = () => {
@@ -28,7 +26,6 @@ const App: React.FC = () => {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="team" element={<Team />} />
-        <Route path="board" element={<Board />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
         <Route path="programs" element={<Programs />} />
@@ -36,6 +33,8 @@ const App: React.FC = () => {
         <Route path="incubation" element={<IncubationHub />} />
         <Route path="services/:id" element={<ServiceDetail />} />
         <Route path="services" element={<Home />} />
+        {/* Redirect old board page to the merged team page */}
+        <Route path="board" element={<Navigate to="/team#board" replace />} />
       </Route>
       
       {/* Admin Routes */}
@@ -53,7 +52,7 @@ const App: React.FC = () => {
         <Route path="programs" element={<ProgramsAdmin />} />
         <Route path="blog" element={<BlogAdmin />} />
         <Route path="team" element={<TeamAdmin />} />
-        <Route path="board" element={<BoardAdmin />} />
+        <Route path="board" element={<Navigate to="../team" replace />} />
       </Route>
     </Routes>
   );

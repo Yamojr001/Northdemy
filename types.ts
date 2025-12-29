@@ -7,13 +7,21 @@ export interface Service {
   link: string;
 }
 
+export type TeamCategory = 'leadership' | 'board' | 'training' | 'incubation';
+
 export interface TeamMember {
   id: string;
   name: string;
   role: string;
   image: string;
   bio?: string;
-  linkedin?: string;
+  category: TeamCategory;
+  socials?: {
+    linkedin?: string;
+    twitter?: string;
+    facebook?: string;
+    instagram?: string;
+  };
 }
 
 export interface BlogPost {

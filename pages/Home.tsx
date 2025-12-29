@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Star, Users, Briefcase, Globe2, ShieldCheck, GraduationCap, Rocket, Code, TrendingUp, Mail, Phone } from 'lucide-react';
-import { TESTIMONIALS } from '../constants';
+import { ArrowRight, CheckCircle2, Star, Users, Briefcase, Globe2, ShieldCheck, GraduationCap, Rocket, Code, TrendingUp, Mail, Phone, Quote } from 'lucide-react';
+import { TESTIMONIALS, PARTNERS } from '../constants';
 import { DataManager } from '../utils/dataManager';
 
 const Home: React.FC = () => {
@@ -15,7 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
+       {/* Hero Section */}
       <section className="relative pt-16 pb-24 lg:pt-32 lg:pb-40 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
@@ -107,8 +108,20 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Partners / Trusted By Marquee */}
+      <section className="py-12 border-y border-slate-100 bg-slate-50/30 overflow-hidden">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm font-bold text-slate-400 uppercase tracking-[0.2em] mb-8">Trusted by Global Ecosystem Leaders</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+            {PARTNERS.map((p, i) => (
+              <span key={i} className="text-2xl font-black text-slate-300 select-none hover:text-blue-600 transition-colors">{p.name}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid Section */}
-      <section className="py-24 bg-slate-50/50">
+      <section className="py-24">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h3 className="text-blue-600 font-bold tracking-widest uppercase text-sm">What We Do</h3>
@@ -143,8 +156,53 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      
-      {/* ... Other sections omitted for brevity but they follow the same pattern ... */}
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2 space-y-8">
+              <h3 className="text-blue-400 font-bold tracking-widest uppercase text-sm">Success Stories</h3>
+              <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">Hear From Our <br /> <span className="text-blue-400">Global Community</span></h2>
+              <p className="text-slate-400 text-lg leading-relaxed">We measure our success by the growth of our talents and the impact of the startups we've supported.</p>
+              <div className="flex gap-4">
+                <Link to="/about" className="px-8 py-3 bg-white text-slate-900 font-bold rounded-xl hover:bg-blue-400 hover:text-white transition-all">Read Case Studies</Link>
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2 grid grid-cols-1 gap-6">
+              {TESTIMONIALS.map((t) => (
+                <div key={t.id} className="bg-white/5 border border-white/10 p-8 rounded-[32px] backdrop-blur-sm">
+                  <Quote size={32} className="text-blue-400 mb-4 opacity-50" />
+                  <p className="text-xl italic text-slate-300 leading-relaxed mb-8">"{t.quote}"</p>
+                  <div className="flex items-center space-x-4">
+                    <img src={t.image} alt={t.author} className="w-12 h-12 rounded-full object-cover border-2 border-blue-400" />
+                    <div>
+                      <div className="font-bold text-white">{t.author}</div>
+                      <div className="text-blue-400 text-sm">{t.role}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section className="py-24">
+         <div className="container mx-auto px-4">
+            <div className="bg-blue-600 rounded-[48px] p-12 lg:p-24 text-center text-white relative overflow-hidden">
+               <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+               <h2 className="text-4xl lg:text-6xl font-black mb-8 relative z-10">Ready to transform <br /> your future?</h2>
+               <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                  <Link to="/programs" className="px-10 py-5 bg-white text-blue-600 font-black rounded-2xl hover:bg-slate-900 hover:text-white transition-all shadow-2xl">Start Training</Link>
+                  <Link to="/incubation" className="px-10 py-5 bg-slate-900 text-white font-black rounded-2xl hover:bg-white hover:text-blue-600 transition-all shadow-2xl">Incubate Startup</Link>
+               </div>
+            </div>
+         </div>
+      </section>
     </div>
   );
 };
